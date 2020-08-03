@@ -37,7 +37,10 @@ def dataset_nombre(dataset):
     X = data.data    
     y = data.target
     return X,y
-
+if dataset == "Iris":
+    st.write("Descripción del Dataset: El conjunto de datos contiene 3 clases de 50 instancias cada una, donde cada clase se refiere a un tipo de planta de iris.")
+else:
+    st.write("""Descripcion del Dataset: Las características se calculan a partir de una imagen digitalizada de un aspirado con aguja fina (FNA) de una masa mamaria. Describen las características de los núcleos celulares presentes y las cuales pueden servir para detectar si un tumor es maligno o benigno.""")
 st.write("Descripción del Dataset:")
 
 if dataset =='Iris':
