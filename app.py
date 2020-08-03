@@ -23,7 +23,7 @@ st.write("""
 dataset = st.sidebar.selectbox(" Selecciona el Dataset", ("Iris","Breast Cancer"))
 st.write("## Ha seleccionado el siguiente Dataset: ",dataset)
 test_valor = st.sidebar.slider(" Tamaño del Valor de Test", 0.1, 0.99,0.2)
-
+instancia = st.sidebar.slider(" Seleccione el Randon State ", 1, 1500,50)
 clasificador = st.sidebar.selectbox("Seleccione el algoritmo de clasificacion", ("KNN", "RANDOM FOREST", "SVM", "NAIVE BAYES","REDES NEURONALES","REGRESION LOGISTICA"))
 st.write("con el siguiente clasificador: ",clasificador)
 
@@ -118,7 +118,7 @@ def get_clasificadores(clf_name, params):
 
 if dataset != "Iris":
     clf = get_clasificadores(clasificador, params)
-    X_train, X_test,  y_train, y_test = train_test_split(X, y, test_size=test_valor, random_state=1234)
+    X_train, X_test,  y_train, y_test = train_test_split(X, y, test_size=test_valor, random_state=instancia)
     clf.fit(X_train,y_train)
     y_predict = clf.predict(X_test)
     f1 = f1_score(y_test, y_predict,average='micro')
