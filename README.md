@@ -1,0 +1,2 @@
+# datasetDeber
+Implementar en R o Python (web-no local) los algoritmos: KNN, Random Forest, Naive Bayes, Regresión Logística, Red Neuronal y Máquina de Soporte Vectorial. Realizar pruebas de funcionamiento sobre el dataset Iris y posteriormente sobre otro dataset (a su elección). Comparar los resultados de cada algoritmo, a modo de benchmarking, y redactar un informe en Latex, formato IEEE. Se debe incluir en el trabajo, todos los scripts utilizados junto los archivos generados en Latex.
