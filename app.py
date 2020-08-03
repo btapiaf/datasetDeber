@@ -174,7 +174,7 @@ if dataset != "Iris":
 
 else:
     clf = get_clasificadores(clasificador, params)
-    X_train, X_test,  y_train, y_test = train_test_split(X, y, test_size=test_valor,random_state=1234)
+    X_train, X_test,  y_train, y_test = train_test_split(X, y, test_size=test_valor,random_state=instancia)
     clf.fit(X_train,y_train)
     y_predict = clf.predict(X_test)
     f1 = f1_score(y_test, y_predict,average='micro')
